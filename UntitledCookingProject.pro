@@ -2,4 +2,5 @@ TEMPLATE = subdirs
 
 CONFIG += c++11
 
-SUBDIRS += MainWidget
+SUBDIRS += libs/QGumboParser \
+    MainWidget

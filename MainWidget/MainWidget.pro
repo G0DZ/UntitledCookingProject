@@ -16,11 +16,13 @@ CONFIG += c++11
 SOURCES += main.cpp\
         mainwindow.cpp \
     httpconnect.cpp \
-    recipe.cpp
+    recipe.cpp \
+    recipeparser.cpp
 
 HEADERS  += mainwindow.h \
     httpconnect.h \
-    recipe.h
+    recipe.h \
+    recipeparser.h
 
 FORMS    += mainwindow.ui
 
