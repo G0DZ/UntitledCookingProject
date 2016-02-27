@@ -1,20 +1,5 @@
-#-------------------------------------------------
-#
-# Project created by QtCreator 2016-02-13T18:01:31
-#
-#-------------------------------------------------
+TEMPLATE = subdirs
 
-QT       += core gui
+CONFIG += c++11
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
-
-TARGET = UntitledCookingProject
-TEMPLATE = app
-
-
-SOURCES += main.cpp\
-        mainwindow.cpp
-
-HEADERS  += mainwindow.h
-
-FORMS    += mainwindow.ui
+SUBDIRS += MainWidget
