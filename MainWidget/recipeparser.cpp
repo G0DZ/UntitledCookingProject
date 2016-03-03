@@ -32,7 +32,7 @@ bool RecipeParser::parse()
     parseImage();
     parseViews();
     parsePublishDate();
-    parseTimePeaces();
+    //parseTimePeaces();
     parseAuthorName();
     parseDesc();
     parseIng();

@@ -18,8 +18,10 @@ public:
 private slots:
     void on_pushButton_clicked();
     void setTextEdit(QString content);
+    void transformImg(QString content);
 private:
     Ui::MainWindow *ui;
+    QPixmap genImg;
 };
 
 #endif // MAINWINDOW_H
