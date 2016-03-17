@@ -3,6 +3,7 @@
 
 #include <QString>
 #include <vector>
+#include <prevrecipe.h>
 
 //структура для хранения ингредиентов
 typedef struct {
@@ -27,15 +28,10 @@ typedef struct {
 } RecipeTextElement;
 
 //сам рецепт
-class Recipe
+class Recipe : public PrevRecipe
 {  
 private:
-    QString title;                          //название
-    QString imgLink;                        //картинка
-    QString views;                          //просмотры
-    QString authorName;                     //автор
     QString publishDate;                    //дата публикации
-    QString recipeDesc;                     //описание
     QString time;                           //время приготовления
     QString peaces;                         //порции
     std::vector<IngredientsGroup> ing;      //ингредиенты
@@ -44,23 +40,8 @@ private:
 public:
     Recipe();
 
-    QString getTitle() const;
-    void setTitle(const QString &value);
-
-    QString getImgLink() const;
-    void setImgLink(const QString &value);
-
-    QString getViews() const;
-    void setViews(const QString &value);
-
-    QString getAuthorName() const;
-    void setAuthorName(const QString &value);
-
     QString getPublishDate() const;
     void setPublishDate(const QString &value);
-
-    QString getRecipeDesc() const;
-    void setRecipeDesc(const QString &value);
 
     std::vector<IngredientsGroup> getIng() const;
     void setIng(const std::vector<IngredientsGroup> &value);

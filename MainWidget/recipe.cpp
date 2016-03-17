@@ -1,5 +1,10 @@
 #include "recipe.h"
 
+Recipe::Recipe()
+{
+
+}
+
 std::vector<IngredientsGroup> Recipe::getIng() const
 {
     return ing;
@@ -50,51 +55,6 @@ void Recipe::setPeaces(const QString &value)
     peaces = value;
 }
 
-Recipe::Recipe()
-{
-
-}
-
-QString Recipe::getTitle() const
-{
-    return title;
-}
-
-void Recipe::setTitle(const QString &value)
-{
-    title = value;
-}
-
-QString Recipe::getImgLink() const
-{
-    return imgLink;
-}
-
-void Recipe::setImgLink(const QString &value)
-{
-    imgLink = value;
-}
-
-QString Recipe::getViews() const
-{
-    return views;
-}
-
-void Recipe::setViews(const QString &value)
-{
-    views = value;
-}
-
-QString Recipe::getAuthorName() const
-{
-    return authorName;
-}
-
-void Recipe::setAuthorName(const QString &value)
-{
-    authorName = value;
-}
-
 QString Recipe::getPublishDate() const
 {
     return publishDate;
@@ -103,14 +63,4 @@ QString Recipe::getPublishDate() const
 void Recipe::setPublishDate(const QString &value)
 {
     publishDate = value;
-}
-
-QString Recipe::getRecipeDesc() const
-{
-    return recipeDesc;
-}
-
-void Recipe::setRecipeDesc(const QString &value)
-{
-    recipeDesc = value;
 }

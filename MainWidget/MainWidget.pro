@@ -17,12 +17,16 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     httpconnect.cpp \
     recipe.cpp \
-    recipeparser.cpp
+    recipeparser.cpp \
+    prevrecipe.cpp \
+    searchparser.cpp
 
 HEADERS  += mainwindow.h \
     httpconnect.h \
     recipe.h \
-    recipeparser.h
+    recipeparser.h \
+    prevrecipe.h \
+    searchparser.h
 
 FORMS    += mainwindow.ui
 
