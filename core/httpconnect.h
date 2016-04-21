@@ -16,7 +16,6 @@ class HttpConnect : public QObject
 public:
     HttpConnect();
     ~HttpConnect();
-    bool downloadContent(QString urltext, contentBufferType cbtType, contentSilenceMode csmMode);
 private:
     //параметры запуска
     contentBufferType cbt;
@@ -31,6 +30,8 @@ private:
     QString pageContent;
     //
     void startRequest(QUrl url);
+public slots:
+    bool downloadContent(QString urltext, contentBufferType cbtType, contentSilenceMode csmMode);
 private slots:
     void httpFileFinished();
     void httpFileReadyRead();

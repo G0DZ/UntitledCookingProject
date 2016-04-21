@@ -37,10 +37,10 @@ int SearchParser::parsePrevCount()
         elementsCount = 0;
     else{
         int x = span.innerText().remove(QRegExp("[^\\d]")).toInt();
-        qDebug() << span.innerText().remove(QRegExp("[^\\d]"));
+        //qDebug() << span.innerText().remove(QRegExp("[^\\d]"));
         elementsCount = x;
     }
-    qDebug() << elementsCount;
+    //qDebug() << elementsCount;
     return elementsCount;
 }
 
@@ -58,19 +58,19 @@ std::vector<PrevRecipe> SearchParser::parsePrevRecipes()
             QGumboNode h1A = tdH1.getElementsByTagName(HtmlTag::A).front(); //a
             pr.setRecipeUrl(h1A.getAttribute("href"));
             pr.setTitle(h1A.innerText());
-            qDebug() << pr.getTitle() << "   " << pr.getRecipeUrl();
+            //qDebug() << pr.getTitle() << "   " << pr.getRecipeUrl();
             //парсим описание
             QGumboNode tdtd = td.getElementsByTagName(HtmlTag::TD).at(1); //td
             QGumboNode tdImg = tdtd.getElementsByTagName(HtmlTag::IMG).front(); //a
             pr.setImgLink(tdImg.getAttribute("src"));
-            qDebug() << pr.getImgLink();
+            //qDebug() << pr.getImgLink();
             //get tr
             QGumboNode tdtr = td.getElementsByTagName(HtmlTag::TR).front(); //td2
             QGumboNode td2 = tdtr.children().back();
             QGumboNode td2desc = td2.childNodes().front();
             if(td2desc.isText())
                 pr.setRecipeDesc(td2desc.getText().simplified());
-            qDebug() << pr.getRecipeDesc();
+            //qDebug() << pr.getRecipeDesc();
             //
             QGumboNode userPlace = node.getElementsByClassName("recipie_username").front();
             pr.setAuthorName(userPlace.innerText());
@@ -82,7 +82,7 @@ std::vector<PrevRecipe> SearchParser::parsePrevRecipes()
             QGumboNode votesPlace = node.getElementsByClassName("recipie_vote").front();
             QGumboNode votesB = votesPlace.getElementsByTagName(HtmlTag::B).front();
             pr.setVotes(votesB.innerText());
-            qDebug() << pr.getAuthorName() << pr.getViews() << pr.getLikes() << pr.getVotes() << "\n";
+            //qDebug() << pr.getAuthorName() << pr.getViews() << pr.getLikes() << pr.getVotes() << "\n";
             recipes.emplace_back(pr);
         }
     }

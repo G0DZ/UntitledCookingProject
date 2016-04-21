@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Styles.qml</file>
+        <file>qmldir</file>
+        <file>ButtonHint.qml</file>
+        <file>MenuItem.qml</file>
+        <file>MenuTitle.qml</file>
+        <file>FindNameTitle.qml</file>
+        <file>Preview.qml</file>
+    </qresource>
+</RCC>
